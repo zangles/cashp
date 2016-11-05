@@ -223,7 +223,7 @@ class RusasDownloader extends Downloader
             $aux->OriginalUrl = $url;
             $aux->save();
 
-            $img->galleries()->attach($gallery);
+            $aux->galleries()->attach($gallery);
         }
     }
     
