@@ -79,7 +79,8 @@ class RusasDownloader extends Downloader
     public function startDownload()
     {
         $url = $this->getRusasUrl();
-        
+        var_dump($url);
+        die();
         $parsedUrl = parse_url($url);
 
         $aUrl = $parsedUrl['path'];
