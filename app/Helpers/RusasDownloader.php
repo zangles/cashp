@@ -215,15 +215,17 @@ class RusasDownloader extends Downloader
 
     private function saveImageDb($gallery,  $name,$url)
     {
-        $img = image::where('OriginalUrl',$url)->first();
-
-        if ($img === null){
-            $aux = new image();
-            $aux->path = '/storage/rusas/'.$name;
-            $aux->OriginalUrl = $url;
-            $aux->save();
-
-            $aux->galleries()->attach($gallery);
+        if ($url !== null){
+            $img = image::where('OriginalUrl',$url)->first();
+    
+            if ($img === null){
+                $aux = new image();
+                $aux->path = '/storage/rusas/'.$name;
+                $aux->OriginalUrl = $url;
+                $aux->save();
+    
+                $aux->galleries()->attach($gallery);
+            }
         }
     }
     
