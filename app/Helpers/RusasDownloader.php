@@ -79,8 +79,7 @@ class RusasDownloader extends Downloader
     public function startDownload()
     {
         $url = $this->getRusasUrl();
-        var_dump($url);
-        die();
+
         $parsedUrl = parse_url($url);
 
         $aUrl = $parsedUrl['path'];
@@ -120,6 +119,8 @@ class RusasDownloader extends Downloader
 //        $titulo = $this->getTitle($this->dw->get_remote_data($url));
 
         $folder = $this->picFolder;
+        var_dump($urls);
+        die();
         $this->downloadImages($urls,$folder);
 
 
