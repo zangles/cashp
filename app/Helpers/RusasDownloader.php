@@ -222,8 +222,7 @@ class RusasDownloader extends Downloader
             'size' => $fileSize,
             'OriginalUrl' => $url
         ]);
-        var_dump($img);
-        die();
+
 //        $img = new image();
 //        $img->path = '/storage/rusas/'.$name;
 //        $img->size = $fileSize;
