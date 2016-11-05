@@ -199,9 +199,8 @@ class RusasDownloader extends Downloader
 
             //$aux0 = $this->getFileHeaders($url);
 //            $fileSize = ($aux0[1] != null) ? $aux0[1] : 0;
-            $fileSize = 0;
 
-            $this->saveImageDb($gallery,$fileSize,$new_file_name,$url);
+            $this->saveImageDb($gallery,$new_file_name,$url);
 
             if ($this->showLog){
 //                $actualDownload = $actualDownload + $fileSize;
@@ -214,12 +213,11 @@ class RusasDownloader extends Downloader
         
     }
 
-    private function saveImageDb($gallery, $fileSize, $name,$url)
+    private function saveImageDb($gallery,  $name,$url)
     {
         
         $img = image::firstOrCreate([
             'path' => '/storage/rusas/'.$name,
-            'size' => $fileSize,
             'OriginalUrl' => $url
         ]);
 

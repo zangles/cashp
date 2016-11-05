@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class image extends Model
 {
     protected $fillable = [
-        'path','size','OriginalUrl'  
+        'path','OriginalUrl'  
     ];
 
     public function galleries()

@@ -17,7 +17,6 @@ class CreateImagesTable extends Migration
             $table->increments('id');
             $table->string('path');
             $table->string('OriginalUrl');
-            $table->integer('size');
             $table->timestamps();
         });
     }
