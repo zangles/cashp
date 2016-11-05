@@ -30,7 +30,7 @@ class DownloadsController extends Controller
     {
         $rusas = \App\StatusDownlaoder::where('script','rusas')->first();
         $r = new RusasDownloader();
-        $r->setPicFolder(storage_path().'\app\public\rusas');
+        $r->setPicFolder(storage_path().'/app/public/rusas');
         $start = ($rusas->start == 0)? $rusas->lastPage : $rusas->start;
 
         $r->setShowLog($log);
