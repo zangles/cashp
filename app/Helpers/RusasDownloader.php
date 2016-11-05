@@ -119,9 +119,8 @@ class RusasDownloader extends Downloader
 //        $titulo = $this->getTitle($this->dw->get_remote_data($url));
 
         $folder = $this->picFolder;
-        var_dump($urls);
-        die();
-        $this->downloadImages($urls,$folder);
+
+        $this->downloadImages(array_reverse($urls),$folder);
 
 
     }
@@ -223,6 +222,8 @@ class RusasDownloader extends Downloader
             'size' => $fileSize,
             'OriginalUrl' => $url
         ]);
+        var_dump($img);
+        die();
 //        $img = new image();
 //        $img->path = '/storage/rusas/'.$name;
 //        $img->size = $fileSize;
