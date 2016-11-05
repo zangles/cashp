@@ -39,8 +39,8 @@ class DownloadsController extends Controller
         $r->setPagina(1);
         $r->startDownload();
 
-        $lastPage = $start + $rusas->pages;
-        $rusas->lastPage = $lastPage;
+//        $lastPage = $start + $rusas->pages;
+        $rusas->lastPage = 0;
         $rusas->save();
 
     }
