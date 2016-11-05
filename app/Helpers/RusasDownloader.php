@@ -196,9 +196,9 @@ class RusasDownloader extends Downloader
                 }
             }
 
-            $aux0 = $this->getFileHeaders($url);
-            $fileSize = ($aux0[1] != null) ? $aux0[1] : 0;
-
+            //$aux0 = $this->getFileHeaders($url);
+//            $fileSize = ($aux0[1] != null) ? $aux0[1] : 0;
+            $fileSize = 0;
 
             $this->saveImageDb($gallery,$fileSize,$new_file_name,$url);
 
